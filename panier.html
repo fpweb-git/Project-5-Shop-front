@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ORINOCO</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style/style.css">
+    </head>
+
+    <body>
+        <!--popup-->
+        <div class="popup">
+            <span class="h4 text-success">Veuillez patienter...</span>
+        </div>
+        <!--nav-->
+        <div class="nav-bg">
+            <div class="container">
+                <div class="row">
+                    <nav class="col navbar navbar-expand-md navbar navbar-dark">
+                        <a class="navbar-brand" href="./index.html">
+                            <i class="fas fa-camera-retro h3"></i>
+                            <span class="h3 ml-2 font-weight-light">ORINOCO</span>
+                        </a>
+                        <button id="btNumber" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div id="navbarContent" class="collapse navbar-collapse pr-3">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="./index.html">Accueil</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!--produit-->
+        <div class="container py-5">
+            <div class="row">
+                <div class="col panier mx-auto">
+                    <div>
+                        <a href="./index.html"><button class="btn btn-outline-primary"><i class="fas fa-chevron-left mr-2"></i>Continuer le shopping</button></a>
+                    </div>
+                    <div class="w-100 my-5 p-3">
+                        <h1 class="h2 text-center">Votre panier :</h1>
+                    </div>
+                    <div class="cart-product">
+                        <div class="d-flex justify-content-between px-4 cart-label">
+                            <h3 class="text-secondary h6 w-75">Produit</h3>
+                            <div class="d-flex">
+                            <h3 class="text-secondary h6 mr-3 pr-5">Quantité</h3>
+                            <h3 class="text-secondary h6 mr-4">prix</h3>
+                            </div>
+                        </div>
+                        <div class="ordered-product">
+                            <ul class="pl-0 item-cart-list">
+                                <!--product list here-->
+                                <li class="my-5 p-4 rounded shadow empty-cart">
+                                    <div class=" d-flex justify-content-center align-items-center">
+                                        <p class="h5">Votre panier est vide</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end px-4 align-items-center py-5 flex-wrap">
+                        <h3 class="text-secondary h4 m-0 pr-4 mb-2">Total :</h3>
+                        <span class="rounded total-price px-5 py-2 shadow-sm border">0 €</span>
+                    </div>
+                </div>
+        <!--Form-->
+        <div class="container py-5">
+            <div class="row">
+                <form class="col cart-form mx-auto bg-light p-5 rounded border" novalidate>
+                    <div class="form-order w-75 mx-auto">
+                        <div class="form-group mt-4">
+                            <label for="email">Adresse e-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="nom@exemple.com">
+                            <small class="form-text text-muted" id="email-err">Ce champ est requis et doit contenir le symbole "@"</small>
+                        </div>
+                        <div class="form-group my-4">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" id="nom" placeholder="ex: Dupont" >
+                            <small class="form-text text-muted" id="name-err">Ce champ est requis.</small>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" class="form-control" id="prenom" placeholder="ex: Maxime" >
+                            <small class="form-text text-muted" id="surname-err">Ce champ est requis.</small>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="adresse">Adresse</label>
+                            <input class="form-control" id="adresse" placeholder="ex: 17 avenue du moulin" ></input>
+                            <small class="form-text text-muted" id="adress-err">Ce champ est requis.</small>
+                        </div>
+                        <div class="form-group mb-5">
+                            <label for="ville">Ville</label>
+                            <input type="text" class="form-control" id="ville" placeholder="ex: Paris" ></input>
+                            <small class="form-text text-muted" id="city-err">Ce champ est requis.</small>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center py-3">
+                        <button type="submit" class="btn btn-lg btn-success order">Commander</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <!--boostrap-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!--JS-->
+        <script src="./front/panier.js"></script>
+    </body>
+
+</html>

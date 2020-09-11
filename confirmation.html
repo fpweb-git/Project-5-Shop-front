@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ORINOCO</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style/style.css">
+    </head>
+
+    <body>
+        <!--nav-->
+        <div class="nav-bg">
+            <div class="container">
+                <div class="row">
+                    <nav class="col navbar navbar-expand-md navbar navbar-dark">
+                        <a class="navbar-brand" href="./index.html">
+                            <i class="fas fa-camera-retro h3"></i>
+                            <span class="h3 ml-2 font-weight-light">ORINOCO</span>
+                        </a>
+                        <button id="btNumber" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div id="navbarContent" class="collapse navbar-collapse pr-3">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="./index.html">Accueil</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!--test-->
+        <div class="container py-5">
+            <div class="row">
+                <div class="col py-5">
+                    <h1 class="py-5">Merci pour votre commande !</h1>
+                    <p class="h4">Le montant total de votre commande est de : </p>
+                    <span class="total-price"></span>
+                    <p class="h4 pt-4">Votre numero de commande : </p>
+                    <span class="order-id"></span>
+                </div>
+            </div>
+        </div>
+
+        <!--boostrap-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!--JS-->
+        <script src="./front/confirmation.js"></script>
+    </body>
+
+</html>
