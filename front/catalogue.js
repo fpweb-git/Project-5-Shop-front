@@ -23,7 +23,7 @@ fetch(`http://localhost:3000/api/cameras/`)
 			<p class="card-text">${element.description}</p>
 			<a href="./produit.html?/${element._id}" class="stretched-link"></a>
 		</div>`;
-			//display all item on the UI
+			//display all items on the UI
 			itemList.appendChild(itemCard);
 		});
 	});

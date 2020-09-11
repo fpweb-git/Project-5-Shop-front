@@ -13,6 +13,7 @@ let itemInCartList = localStorage.getItem("productInCart");
 itemInCartList = JSON.parse(itemInCartList);
 let products = Object.values(itemInCartList);
 
+// check if we have item on local storage and add to the UI
 if (itemInCartList !== null) {
 	products.forEach((product) => {
 		const productUI = document.createElement("div");
@@ -60,9 +61,8 @@ deleteBtn.forEach((btn, index) => {
 		// remove from local storage
 		products.splice(index, 1);
 		localStorage.setItem("productInCart", JSON.stringify(products));
-		if (products.length === 1) {
-			location.reload();
-		}
+		location.reload();
+
 		// //remove from UI
 		deleteBtn[index].parentNode.parentNode.remove();
 		// empty cart text comeback
@@ -72,7 +72,7 @@ deleteBtn.forEach((btn, index) => {
 	});
 });
 
-// Send the form form
+// Send the order
 function sendOrder() {
 	formFull.addEventListener("submit", (e) => {
 		e.preventDefault();
@@ -96,11 +96,6 @@ function sendOrder() {
 			}, 2000);
 		}
 	});
-}
-// open confirmation page
-
-function openConfirmation() {
-	window.open("./confirmation.html", "_self");
 }
 
 // check email value
