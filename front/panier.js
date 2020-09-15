@@ -58,13 +58,12 @@ deleteBtn.forEach((btn, index) => {
 		let totalNrBefore = localStorage.getItem("produit");
 		const upTotalNr = totalNrBefore - products[index].inCart;
 		localStorage.setItem("produit", JSON.stringify(upTotalNr));
+
 		// remove from local storage
 		products.splice(index, 1);
 		localStorage.setItem("productInCart", JSON.stringify(products));
 		location.reload();
 
-		// //remove from UI
-		deleteBtn[index].parentNode.parentNode.remove();
 		// empty cart text comeback
 		if (localStorage.getItem("produit") === "0") {
 			emptyCartMsg.style.display = "inherit";
